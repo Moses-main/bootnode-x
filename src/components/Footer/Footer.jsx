@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import { FiGithub, FiTwitter, FiMessageCircle } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { FiGithub, FiMessageCircle } from "react-icons/fi";
+import { FaTwitter } from "react-icons/fa";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,7 +27,7 @@ export const Footer = () => {
               >
                 <FiGithub className="w-5 h-5" />
               </a>
-              <Link
+              {/* <Link
                 to="/about"
                 className="text-gray-400 hover:text-white transition-colors"
               >
@@ -37,19 +38,19 @@ export const Footer = () => {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Features
-              </Link>
+              </Link> */}
               <a
-                href="#"
+                href="https://x.com/_bootnode"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FiTwitter className="w-5 h-5" />
+                <FaTwitter className="w-5 h-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FiMessageCircle className="w-5 h-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -57,7 +58,10 @@ export const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/features" className="hover:text-white transition-colors">
+                <Link
+                  to="/features"
+                  className="hover:text-white transition-colors"
+                >
                   Features
                 </Link>
               </li>
@@ -109,7 +113,10 @@ export const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
                   About
                 </Link>
               </li>
