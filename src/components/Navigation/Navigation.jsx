@@ -32,6 +32,7 @@ export const Navigation = ({ scrolled }) => {
     { href: "/features", text: "Features" },
     { href: "/about", text: "About" },
     { href: "/documentation", text: "Documentation" },
+    { href: "/learn", text: "Learn" },
     { href: "/contact", text: "Contact" },
   ];
 
@@ -60,7 +61,7 @@ export const Navigation = ({ scrolled }) => {
 
             {/* Desktop Auth Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <Link to="/documentation" className="text-gray-600 hover:text-indigo-600 transition-colors">Documentation</Link>
+              <Link to="/learn" className="text-gray-600 hover:text-indigo-600 transition-colors">Learn</Link>
               <Link to="/contact" className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
                 Contact Us
               </Link>

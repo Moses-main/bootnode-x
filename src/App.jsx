@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Features from "./pages/Features";
 import Documentation from "./pages/Documentation";
 import Contact from "./pages/Contact";
+import Learn from "./pages/Learn";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,6 +35,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/features" element={<Features />} />
             <Route path="/documentation" element={<Documentation />} />
+            <Route path="/learn" element={<Learn />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
