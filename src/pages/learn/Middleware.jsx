@@ -61,7 +61,7 @@ const logger = (req, res, next) => {
 };`;
 
   // Usage in app.js
-  app.use(logger);
+  `app.use(logger)`;
   `;
 
   const notFound = `; // 404 Not Found middleware
@@ -73,7 +73,7 @@ const logger = (req, res, next) => {
   };
 
   // Should be placed after all other routes
-  app.use(notFound);
+  `app.use(notFound)`;
   `;
 
   const auth = `; // Authentication middleware
