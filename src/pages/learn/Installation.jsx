@@ -2,84 +2,122 @@ import React from "react";
 import CodeBlock from "../../components/Documentation/CodeBlock";
 
 const Installation = () => {
-  const installCommand = `# Using npm
-npm install bootnode
+  const quickStart = `# Using npx
+npx bootnode my-backend
 
-# Or using yarn
-yarn add bootnode`;
+# Or install globally
+npm install -g bootnode
+bootnode my-backend`;
 
-  const setupCommand = `// In your main server file (e.g., server.js)
-import express from 'express';
-import bootnode from 'bootnode';
+  const projectStructure = `my-backend/
+├── src/
+│   ├── config/     # Configuration files
+│   ├── controllers/# Route controllers
+│   ├── models/     # Database models
+│   └── routes/     # API route definitions
+├── .env           # Environment variables
+└── package.json   # Project configuration`;
 
-const app = express();
+  const availableScripts = `# Development server with hot-reload
+npm run dev
 
-// Initialize Bootnode with your configuration
-bootnode.init({
-  // Your configuration options here
-});
+# Production server
+npm start
 
-// Your other Express middleware and routes
-app.use(express.json());
+# Run tests (coming soon)
+npm test
 
-// Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(\`Server running on port ${"PORT"}\`);
-});`;
+# Lint your code
+npm run lint`;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 p-6">
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold text-gray-900">Installation</h1>
-        <p className="text-gray-600">
-          Get started with Bootnode by following these simple installation
-          steps.
-        </p>
+        <h1 className="text-3xl font-bold text-gray-900">Quick Start</h1>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-8">
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">
-            Prerequisites
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-800">Prerequisites</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Node.js 14.x or later</li>
-            <li>npm 6.x or later or yarn</li>
-            <li>MongoDB 4.4 or later (for database operations)</li>
+            <li>npm 6.x or later</li>
+            <li>MongoDB (local or cloud instance)</li>
           </ul>
         </section>
 
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-gray-800">Installation</h2>
-          <p className="text-gray-700">Install Bootnode using npm or yarn:</p>
-          <CodeBlock code={installCommand} language="bash" title="Terminal" />
+          <p className="text-gray-700">
+            You can use bootnode directly with npx:
+          </p>
+          <CodeBlock 
+            code={quickStart} 
+            language="bash" 
+            title="Terminal"
+          />
+          <p className="text-gray-700">
+            This will create a new directory called <code className="bg-gray-100 px-1.5 py-0.5 rounded">my-backend</code> with a complete backend structure.
+          </p>
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Basic Setup</h2>
-          <p className="text-gray-700">
-            After installation, you can set up a basic Express server with
-            Bootnode:
-          </p>
-          <CodeBlock
-            code={setupCommand}
-            language="javascript"
-            title="server.js"
+          <h2 className="text-2xl font-semibold text-gray-800">Getting Started</h2>
+          <ol className="list-decimal pl-6 space-y-4 text-gray-700">
+            <li className="space-y-2">
+              <p>Navigate to your project directory:</p>
+              <CodeBlock 
+                code="cd my-backend" 
+                language="bash" 
+                title="Terminal"
+              />
+            </li>
+            <li className="space-y-2">
+              <p>Copy the example environment file and update with your configuration:</p>
+              <CodeBlock 
+                code="cp .env.example .env" 
+                language="bash" 
+                title="Terminal"
+              />
+            </li>
+            <li className="space-y-2">
+              <p>Install dependencies:</p>
+              <CodeBlock 
+                code="npm install" 
+                language="bash" 
+                title="Terminal"
+              />
+            </li>
+            <li className="space-y-2">
+              <p>Start the development server:</p>
+              <CodeBlock 
+                code="npm run dev" 
+                language="bash" 
+                title="Terminal"
+              />
+              <p className="text-gray-700">
+                The server will start at <code className="bg-gray-100 px-1.5 py-0.5 rounded">http://localhost:3000</code> by default.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-800">Available Scripts</h2>
+          <CodeBlock 
+            code={availableScripts} 
+            language="bash" 
+            title="package.json scripts"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Verification</h2>
-          <p className="text-gray-700">
-            To verify your installation, run your server and check the console
-            output:
-          </p>
-          <CodeBlock code="node server.js" language="bash" title="Terminal" />
-          <p className="text-gray-700">
-            You should see a message indicating that the server is running on
-            the specified port.
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-800">Project Structure</h2>
+          <CodeBlock 
+            code={projectStructure} 
+            language="bash" 
+            title="Project Structure"
+          />
         </section>
       </div>
     </div>

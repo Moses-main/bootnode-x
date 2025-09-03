@@ -1,5 +1,5 @@
-import React from 'react';
-import CodeBlock from '../../components/Documentation/CodeBlock';
+import React from "react";
+import CodeBlock from "../../components/Documentation/CodeBlock";
 
 const Authentication = () => {
   const userModelCode = `// models/User.js
@@ -211,7 +211,7 @@ export const authorize = (...roles) => {
     if (!roles.includes(req.user.role)) {
       return next(
         new ErrorResponse(
-          \`User role ${req.user.role} is not authorized to access this route\`,
+          \`User role ${"req.user.role"} is not authorized to access this route\`,
           403
         )
       );
@@ -225,7 +225,8 @@ export const authorize = (...roles) => {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold text-gray-900">Authentication</h1>
         <p className="text-gray-600">
-          Learn how to implement JWT-based authentication in your Bootnode application.
+          Learn how to implement JWT-based authentication in your Bootnode
+          application.
         </p>
       </div>
 
@@ -233,46 +234,55 @@ export const authorize = (...roles) => {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-gray-800">User Model</h2>
           <p className="text-gray-700">
-            The User model includes methods for password hashing and JWT token generation.
+            The User model includes methods for password hashing and JWT token
+            generation.
           </p>
-          <CodeBlock 
-            code={userModelCode} 
+          <CodeBlock
+            code={userModelCode}
             language="javascript"
             title="models/User.js"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Authentication Controller</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Authentication Controller
+          </h2>
           <p className="text-gray-700">
-            The auth controller handles user registration, login, and token management.
+            The auth controller handles user registration, login, and token
+            management.
           </p>
-          <CodeBlock 
-            code={authControllerCode} 
+          <CodeBlock
+            code={authControllerCode}
             language="javascript"
             title="controllers/auth.js"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Authentication Routes</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Authentication Routes
+          </h2>
           <p className="text-gray-700">
             Define routes for authentication endpoints.
           </p>
-          <CodeBlock 
-            code={authRoutesCode} 
+          <CodeBlock
+            code={authRoutesCode}
             language="javascript"
             title="routes/auth.js"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Authentication Middleware</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Authentication Middleware
+          </h2>
           <p className="text-gray-700">
-            Protect routes and authorize user roles with these middleware functions.
+            Protect routes and authorize user roles with these middleware
+            functions.
           </p>
-          <CodeBlock 
-            code={authMiddlewareCode} 
+          <CodeBlock
+            code={authMiddlewareCode}
             language="javascript"
             title="middleware/auth.js"
           />
