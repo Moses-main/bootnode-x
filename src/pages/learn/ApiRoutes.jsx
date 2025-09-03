@@ -1,5 +1,5 @@
-import React from 'react';
-import CodeBlock from '../../components/Documentation/CodeBlock';
+import React from "react";
+import CodeBlock from "../../components/Documentation/CodeBlock";
 
 const ApiRoutes = () => {
   const routesExample = `// routes/users.js
@@ -52,7 +52,7 @@ export const getUser = asyncHandler(async (req, res, next) => {
   
   if (!user) {
     return next(
-      new ErrorResponse(\`User not found with id of ${req.params.id}\`, 404)
+      new ErrorResponse(\`User not found with id of ${"req.params.id"}\`, 404)
     );
   }
   
@@ -85,7 +85,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
   
   if (!user) {
     return next(
-      new ErrorResponse(\`User not found with id of ${req.params.id}\`, 404)
+      new ErrorResponse(\`User not found with id of ${"req.params.id"}\`, 404)
     );
   }
   
@@ -103,7 +103,7 @@ export const deleteUser = asyncHandler(async (req, res, next) => {
   
   if (!user) {
     return next(
-      new ErrorResponse(\`User not found with id of ${req.params.id}\`, 404)
+      new ErrorResponse(\`User not found with id of ${"req.params.id"}\`, 404)
     );
   }
   
@@ -197,54 +197,68 @@ export const advancedResults = (model, populate) => async (req, res, next) => {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold text-gray-900">API Routes</h1>
         <p className="text-gray-600">
-          Learn how to create and manage API routes in your Bootnode application.
+          Learn how to create and manage API routes in your Bootnode
+          application.
         </p>
       </div>
 
       <div className="space-y-8">
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Basic Route Structure</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Basic Route Structure
+          </h2>
           <p className="text-gray-700">
-            Organize your API routes with Express Router. Here's an example of a user routes file:
+            Organize your API routes with Express Router. Here's an example of a
+            user routes file:
           </p>
-          <CodeBlock 
-            code={routesExample} 
+          <CodeBlock
+            code={routesExample}
             language="javascript"
             title="routes/users.js"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Controller Methods</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Controller Methods
+          </h2>
           <p className="text-gray-700">
-            Implement controller methods to handle route logic. Here's an example of a users controller:
+            Implement controller methods to handle route logic. Here's an
+            example of a users controller:
           </p>
-          <CodeBlock 
-            code={controllerExample} 
+          <CodeBlock
+            code={controllerExample}
             language="javascript"
             title="controllers/users.js"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Advanced Querying</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Advanced Querying
+          </h2>
           <p className="text-gray-700">
-            Use middleware for advanced querying features like filtering, sorting, pagination, and field selection:
+            Use middleware for advanced querying features like filtering,
+            sorting, pagination, and field selection:
           </p>
-          <CodeBlock 
-            code={middlewareExample} 
+          <CodeBlock
+            code={middlewareExample}
             language="javascript"
             title="middleware/advancedResults.js"
           />
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">Using the Advanced Results Middleware</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Using the Advanced Results Middleware
+          </h2>
           <p className="text-gray-700">
             Apply the advanced results middleware to your routes:
           </p>
-          <CodeBlock 
-            code={"// Example usage with the advancedResults middleware\nimport { advancedResults } from '../middleware/advancedResults.js';\nimport User from '../models/User.js';\n\n// Get all users with advanced querying\nrouter.get('/', advancedResults(User), getUsers);"} 
+          <CodeBlock
+            code={
+              "// Example usage with the advancedResults middleware\nimport { advancedResults } from '../middleware/advancedResults.js';\nimport User from '../models/User.js';\n\n// Get all users with advanced querying\nrouter.get('/', advancedResults(User), getUsers);"
+            }
             language="javascript"
             title="routes/users.js"
           />
@@ -252,10 +266,20 @@ export const advancedResults = (model, populate) => async (req, res, next) => {
             Now you can make requests with query parameters like:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
-            <li><code>GET /api/v1/users?select=name,email</code> - Select specific fields</li>
-            <li><code>GET /api/v1/users?sort=-createdAt</code> - Sort by creation date (newest first)</li>
-            <li><code>GET /api/v1/users?page=2&limit=10</code> - Pagination</li>
-            <li><code>GET /api/v1/users?role=admin</code> - Filter by role</li>
+            <li>
+              <code>GET /api/v1/users?select=name,email</code> - Select specific
+              fields
+            </li>
+            <li>
+              <code>GET /api/v1/users?sort=-createdAt</code> - Sort by creation
+              date (newest first)
+            </li>
+            <li>
+              <code>GET /api/v1/users?page=2&limit=10</code> - Pagination
+            </li>
+            <li>
+              <code>GET /api/v1/users?role=admin</code> - Filter by role
+            </li>
           </ul>
         </section>
       </div>
