@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FiGithub, FiMessageCircle } from "react-icons/fi";
-import { FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ export const Footer = () => {
                 href="https://x.com/_bootnode"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaTwitter className="w-5 h-5" />
+                <FaXTwitter className="w-5 h-5" />
               </a>
               {/* <a
                 href="#"

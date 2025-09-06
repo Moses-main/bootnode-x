@@ -3,7 +3,8 @@ import { FiGithub, FiArrowRight } from "react-icons/fi";
 export const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="text-center">
+      <div className="text-center mt-20">
+        {/* <img src="/bootnode_logo.jpg" alt="bootnode-logo" /> */}
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
           The Complete Backend for{" "}
           <span className="text-indigo-600">Modern Apps</span>
