@@ -3,36 +3,35 @@ import { FiGithub, FiArrowRight } from "react-icons/fi";
 export const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="text-center mt-20">
-        {/* <img src="/bootnode_logo.jpg" alt="bootnode-logo" /> */}
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+      <div className="text-center mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 px-4 sm:px-0">
           The Complete Backend for{" "}
           <span className="text-indigo-600">Modern Apps</span>
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-10 px-4 sm:px-6">
           Bootnode provides everything you need to build scalable, secure, and
           performant applications with minimal setup and maximum developer
           experience.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
           <a
             href="#"
-            className="bg-indigo-600 text- px-8 py-4 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2"
+            className="bg-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-medium hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2 w-full sm:w-auto"
           >
             <span className="text-white">Get Started</span>
-            <FiArrowRight className="w-5 h-5 text-white" />
+            <FiArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </a>
           <a
             href="https://github.com/Moses-main/bootnode"
-            className="border border-gray-300 bg-white text-gray-700 px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center space-x-2"
+            className="border border-gray-300 bg-white text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center space-x-2 w-full sm:w-auto"
           >
-            <FiGithub className="w-5 h-5" />
+            <FiGithub className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>GitHub</span>
           </a>
         </div>
       </div>
 
-      <div className="mt-20 relative">
+      <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 relative px-2 sm:px-0">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl opacity-10 blur-3xl -z-10"></div>
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
           <div className="p-1 bg-gray-50 border-b border-gray-100 flex items-center">
@@ -45,7 +44,7 @@ export const Hero = () => {
               terminal: ~/projects/my-app
             </div>
           </div>
-          <div className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 font-mono text-sm md:text-base">
+          <div className="p-4 sm:p-6 bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 font-mono text-xs sm:text-sm md:text-base overflow-x-auto">
             <div className="mb-4">
               <span className="text-green-400">$</span> npx bootnode my-backend
             </div>
