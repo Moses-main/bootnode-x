@@ -31,7 +31,7 @@ export const Navigation = ({ scrolled }) => {
   const navLinks = [
     { href: "/features", text: "Features" },
     { href: "/about", text: "About" },
-    { href: "/documentation", text: "Documentation" },
+    // { href: "/documentation", text: "Documentation" },
     { href: "/learn", text: "Learn" },
     { href: "/contact", text: "Contact" },
   ];
@@ -76,10 +76,10 @@ export const Navigation = ({ scrolled }) => {
                 Learn
               </Link>
               <Link
-                to="/contact"
+                to="#"
                 className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
               >
-                Contact Us
+                Login
               </Link>
             </div>
 
@@ -120,13 +120,13 @@ export const Navigation = ({ scrolled }) => {
               </Link>
             ))}
             <div className="pt-4 border-t border-gray-200">
-              <Link
+              {/* <Link
                 to="/documentation"
                 className="block w-full px-4 py-2 text-center text-base font-medium text-indigo-600 hover:bg-indigo-50 rounded-md mb-2"
                 onClick={() => setIsOpen(false)}
               >
                 Documentation
-              </Link>
+              </Link> */}
               <Link
                 to="/contact"
                 className="block w-full px-4 py-2 text-center text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md"
